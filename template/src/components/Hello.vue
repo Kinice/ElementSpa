@@ -1,53 +1,32 @@
 <template>
-  <div class="hello">
-    <h1>\{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-      <br>
-      <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+  <div class="well">
+    <div class="row">
+      <div class="col-sm-5 text-right">
+        <img class="logo" src="../assets/logo.png">
+      </div>
+      <div class="col-sm-7 text-left">
+        <h1 v-translate>Hello Vue !</h1>
+      </div>
+    </div>
+    <div class="row text-center">
+      <span v-translate>Change Language</span> : &nbsp;&nbsp;&nbsp;
+      <button class="btn btn-default btn-xs" @click="$translate.setLang('en')">EN</button>
+      <button class="btn btn-default btn-xs" @click="$translate.setLang('fr')">FR</button>
+      <button class="btn btn-default btn-xs" @click="$translate.setLang('es')">ES</button>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'hello',
-  data{{#unless_eq lintConfig "airbnb"}} {{/unless_eq}}() {
-    return {
-      msg: 'Welcome to Your Vue.js App'{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-    }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-  }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-}{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+  export default {
+    locales: require('../i18n/Hello.js')
+  }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
+<style lang="sass" scoped>
+  h1
+    color: #42b983
+  .logo
+    width: 80px
+    height: 80px
 </style>

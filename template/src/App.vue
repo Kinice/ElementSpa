@@ -1,28 +1,35 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
+  <div id="app" class="text-center">
+    <conFrame></conFrame>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import Navbar from './components/Navbar'
+import conFrame from './components/frame'
 
 export default {
-  name: 'app',
-  components: {
-    Hello{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-  }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-}{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+  components: { Navbar , conFrame }
+}
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="sass">
+
+  // Bootstrap
+  $icon-font-path: '../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
+  $link-color: #42b983;
+  $brand-success: #42b983;
+  @import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+  // font awesome
+  $fa-font-path: '../node_modules/font-awesome/fonts/';
+  @import 'node_modules/font-awesome/scss/font-awesome';
+
+  //some styling adaptations
+  p
+    text-align: justify
+  body,html
+    height: 100%
+  #app
+    height: 100%
 </style>

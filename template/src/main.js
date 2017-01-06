@@ -1,18 +1,33 @@
-{{#if_eq build "standalone"}}
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-{{/if_eq}}
-import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-import App from './App'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
+// =============== Base libraries integration ==================
+import Vue from 'vue'
+import ElementUI from 'element-ui'
+import VueResource from 'vue-resource'
+import VueTranslate from 'vue-translate-plugin'
+
+import 'element-ui/lib/theme-default/index.css'
+
+Vue.use(VueResource)
+Vue.use(VueTranslate)
+Vue.use(ElementUI)
+
+import store from './store'
+import router from './router'
+
+// ===== Bootstrap components integration (JQuery needed) ======
+window.$ = window.jQuery = require('jquery')
+require('bootstrap-sass')
+
+// ======================= Base Component ======================
+import App from './App'
+
+// ======================== Vue Instance =======================
 /* eslint-disable no-new */
 new Vue({
+  router,
+  store,
   el: '#app',
-  {{#if_eq build "runtime"}}
-  render: h => h(App){{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-  {{/if_eq}}
-  {{#if_eq build "standalone"}}
-  template: '<App/>',
-  components: { App }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-  {{/if_eq}}
-}){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+  render: h => h(App)
+})
