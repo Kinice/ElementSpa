@@ -10,9 +10,9 @@
     </div>
     <div class="row text-center">
       <span v-translate>Change Language</span> : &nbsp;&nbsp;&nbsp;
-      <button class="btn btn-default btn-xs" @click="$translate.setLang('en')">EN</button>
-      <button class="btn btn-default btn-xs" @click="$translate.setLang('fr')">FR</button>
-      <button class="btn btn-default btn-xs" @click="$translate.setLang('es')">ES</button>
+      <el-button size="mini" @click="$translate.setLang('en')">EN</el-button>
+      <el-button size="mini" @click="$translate.setLang('fr')">FR</el-button>
+      <el-button size="mini" @click="$translate.setLang('es')">ES</el-button>
     </div>
   </div>
 </template>
@@ -29,4 +29,13 @@
   .logo
     width: 80px
     height: 80px
+  .well 
+    text-align: center;
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 </style>

@@ -17,8 +17,7 @@ export default {
   // font awesome
   $fa-font-path: '../node_modules/font-awesome/fonts/';
   @import 'node_modules/font-awesome/scss/font-awesome';
-
-  //some styling adaptations
+  
   p
     text-align: justify
   body,html

@@ -25,6 +25,7 @@
 
 <style lang="less" scoped>
   .g-side{
+    text-align: center;
     height: 100%;
     width: 200px;
     position: absolute;

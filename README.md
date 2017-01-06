@@ -2,10 +2,13 @@
 
 Forked from vuejs-templates/webpack 
 
-使用了Element库的Vue SPA模板。
-
 使用了最新的Vue2.0、Vue-router2.0、Vuex1.0。
 
+使用了Element库的Vue SPA模板。
+
+使用了i18n国际化工具。
+
+支持less、sass。
 ## Usage
 
 这是一个供[vue-cli](https://github.com/vuejs/vue-cli)使用的webpack+vue SPA项目模板。
@@ -38,5 +41,7 @@ Forked from vuejs-templates/webpack
 
 * 使用最新版的Vue系列，包括Vue2.0、Vue-router2.0、Vuex1.0等
 * 使用饿了么团队出品的Element UI
+* 使用i18n+vuex作为国际化工具
+* 支持less、sass
+* 个人reset
 * 设计了适用于后台管理系统的单页应用页面布局
-
