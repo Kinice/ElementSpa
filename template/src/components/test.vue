@@ -30,6 +30,7 @@
     margin: 50px auto;
   }
   .hello{
+    text-align: center;
     background: yellowgreen;
     box-shadow: 0 0 0 7.5px #655, 
                 0 0 0 15px deeppink, 
