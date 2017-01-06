@@ -1,56 +1,42 @@
-# vue-webpack-boilerplate
+## Element SPA
 
-> A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction.
+Forked from vuejs-templates/webpack 
 
-> This template is Vue 2.0 compatible. For Vue 1.x use this command: `vue init webpack#1.0 my-project`
+使用了Element库的Vue SPA模板。
 
-## Documentation
-
-- [For this template](http://vuejs-templates.github.io/webpack): common questions specific to this template are answered and each part is described in greater detail
-- [For Vue 2.0](http://vuejs.org/guide/): general information about how to work with Vue, not specific to this template
+使用了最新的Vue2.0、Vue-router2.0、Vuex1.0。
 
 ## Usage
 
-This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It is recommended to use npm 3+ for a more efficient dependency tree.**
+这是一个供[vue-cli](https://github.com/vuejs/vue-cli)使用的webpack+vue SPA项目模板。
 
-``` bash
-$ npm install -g vue-cli
-$ vue init webpack my-project
-$ cd my-project
-$ npm install
-$ npm run dev
-```
+    $ npm install -g vue-cli
+    $ vue init Kinice/elementSpa my-project
+    $ cd my-project
+    $ npm install
+    $ npm run dev
+## What`s Included
 
-## What's Included
+* `npm run dev`: 在开发环境下获得一流的开发体验。
+    * Webpack + vue-loader 用于加载单文件组件
+    * 热加载
+    * 编译时错误提示
+    * 即时的ESLint代码检查
+* `npm run build`: 生产环境打包。
+    * 用UglifyJS压缩JS代码
+    * 用html-minifier压缩HTML
+    * 用cssnano压缩所有组件中出现的CSS代码
+    * 所有静态资源被打包成长期有效的缓存
+* `npm run unit`: 用Karma + Mocha + karma-webpack在PhantomJS中进行单元测试。
+    * 支持ES2015
+    * 支持所有webpack加载器
+    * 方便地模拟注入
+* `npm run e2e`: 用Nightwatch进行端到端测试。
+    * 同步在多个浏览器中运行测试
 
-- `npm run dev`: first-in-class development experience.
-  - Webpack + `vue-loader` for single file Vue components.
-  - State preserving hot-reload
-  - State preserving compilation error overlay
-  - Lint-on-save with ESLint
-  - Source maps
+## What`s Unique
 
-- `npm run build`: Production ready build.
-  - JavaScript minified with [UglifyJS](https://github.com/mishoo/UglifyJS2).
-  - HTML minified with [html-minifier](https://github.com/kangax/html-minifier).
-  - CSS across all components extracted into a single file and minified with [cssnano](https://github.com/ben-eb/cssnano).
-  - All static assets compiled with version hashes for efficient long-term caching, and a production `index.html` is auto-generated with proper URLs to these generated assets.
+* 使用最新版的Vue系列，包括Vue2.0、Vue-router2.0、Vuex1.0等
+* 使用饿了么团队出品的Element UI
+* 设计了适用于后台管理系统的单页应用页面布局
 
-- `npm run unit`: Unit tests run in PhantomJS with [Karma](http://karma-runner.github.io/0.13/index.html) + [Mocha](http://mochajs.org/) + [karma-webpack](https://github.com/webpack/karma-webpack).
-  - Supports ES2015 in test files.
-  - Supports all webpack loaders.
-  - Easy mock injection.
-
-- `npm run e2e`: End-to-end tests with [Nightwatch](http://nightwatchjs.org/).
-  - Run tests in multiple browsers in parallel.
-  - Works with one command out of the box:
-    - Selenium and chromedriver dependencies automatically handled.
-    - Automatically spawns the Selenium server.
-
-### Fork It And Make Your Own
-
-You can fork this repo to create your own boilerplate, and use it with `vue-cli`:
-
-``` bash
-vue init username/repo my-project
-```
