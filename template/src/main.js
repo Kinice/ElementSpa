@@ -16,10 +16,6 @@ Vue.use(ElementUI)
 import store from './store'
 import router from './router'
 
-// ===== Bootstrap components integration (JQuery needed) ======
-window.$ = window.jQuery = require('jquery')
-require('bootstrap-sass')
-
 // ======================= Base Component ======================
 import App from './App'
 

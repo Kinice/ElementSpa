@@ -11,7 +11,7 @@ Forked from vuejs-templates/webpack
 这是一个供[vue-cli](https://github.com/vuejs/vue-cli)使用的webpack+vue SPA项目模板。
 
     $ npm install -g vue-cli
-    $ vue init Kinice/elementSpa my-project
+    $ vue init kinice/elementSpa my-project
     $ cd my-project
     $ npm install
     $ npm run dev
