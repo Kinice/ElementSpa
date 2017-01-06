@@ -18,6 +18,9 @@ export default {
   $fa-font-path: '../node_modules/font-awesome/fonts/';
   @import 'node_modules/font-awesome/scss/font-awesome';
   
+  //reset
+  @import 'assets/less/reset.less'
+  
   p
     text-align: justify
   body,html
