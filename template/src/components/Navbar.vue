@@ -1,7 +1,7 @@
 <template>
   <header class="g-hd">
     <div class="m-logo">
-      
+      <span>LOGO</span>
     </div>
     <div class="m-user">
       
