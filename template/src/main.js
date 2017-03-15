@@ -6,6 +6,7 @@ import Vue from 'vue'
 import ElementUI from 'element-ui'
 import VueResource from 'vue-resource'
 import VueTranslate from 'vue-translate-plugin'
+import VueValidator from 'vue-validator'
 
 import 'element-ui/lib/theme-default/index.css'
 

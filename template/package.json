@@ -19,6 +19,7 @@
     "vue-resource": "^1.0.3",
     "vue-router": "^2.0.0",
     "vue-translate-plugin": "^1.1.11",
+    "vue-validator": "^3.0.0-alpha.2",
     "vuex": "^2.0.0"
   },
   "devDependencies": {

@@ -4,8 +4,8 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 // ===================== Pages Components ======================
-import Hello from './components/Hello'
-import Test  from './components/test'
+import Hello from './pages/Hello'
+import Test  from './pages/test'
 
 // ==================== Router registration ====================
 export default new Router({

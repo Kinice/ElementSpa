@@ -30,8 +30,14 @@
       }
     }
     .m-user{
+      line-height: 70px;
+      margin-right: 70px;
+      position: absolute;
+      right: 0;
+      top: 0;
       .m-wel{
-
+        color: #fff;
+        font-size: 1.2em;
       }
       .m-exit{
 
