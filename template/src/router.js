@@ -7,6 +7,7 @@ Vue.use(Router)
 import Hello from './pages/Hello'
 import Test  from './pages/test'
 
+import Frame from './components/frame'
 import Login from './pages/common/login'
 import ErrorPage from './pages/common/404'
 

@@ -1,11 +1,11 @@
 <template>
   <div class="login">
-      <div class="login-form">
+      <div class="login-form" @keyup.enter="login">
         <div class="login-title">
-            <h1>VIP MUSIC</h1>
+            <h1>ELEMENT SPA</h1>
         </div>
+        <input type="username" name="username" v-model="form.username">
         <input type="password" name="password" v-model="form.password">
-        <input type="password" name="password" v-model="form.username">
         <button @click="login">Login</button>
         <div class="login-desc">
             <p>测试用户名admin，密码111111</p>
@@ -42,6 +42,14 @@
     }
 </script>
 <style lang="less" scoped>
+    .publicInput{
+        display: block;
+        width: 400px;
+        height: 40px;
+        margin: 0 0 15px;
+        border-radius: 20px;
+        text-align: center;
+    }
     .login{
         width: 100%;
         height: 100%;
@@ -62,21 +70,17 @@
             -webkit-transform: translate(-50%,-50%);
             -ms-transform: translate(-50%,-50%);
             input{
-                width: 400px;
-                height: 40px;
+                .publicInput;
                 border: 1px solid #fff;
                 background: transparent;
                 color: #fff;
-                padding: 12px;
-                border-radius: 20px;
+                padding: 0 12px;
             }
             button{
-                width: 400px;
-                height: 40px;
+                .publicInput;
                 background: #fff;
                 color: #324057;
-                padding: 12px;
-                border-radius: 20px;
+                border: none;
             }
         }
         .login-desc{
