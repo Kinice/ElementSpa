@@ -14,14 +14,34 @@ Vue.use(VueResource)
 Vue.use(VueTranslate)
 Vue.use(ElementUI)
 
-import store from './store'
+import filters from './libs/filter'
+import store from './store/'
 import router from './router'
 
 // ======================= Base Component ======================
 import App from './App'
 
 // ======================== Vue Instance =======================
-/* eslint-disable no-new */
+
+// 初始化filter
+Object.keys(filters).forEach(k => Vue.filter(k, filters[k]))
+
+Vue.http.interceptors.push(function(request, next) {
+    request.headers.set('token',store.state.User.password)
+    next(response => {
+        console.log(response)
+    })
+});
+
+router.beforeEach(({meta, path}, from, next) => {
+    var { auth = true } = meta
+    var isLogin = Boolean(store.state.User.username)
+
+    if(auth && !isLogin && path !== '/login') return next({ path: '/login' })
+
+    next()
+})
+
 new Vue({
   router,
   store,

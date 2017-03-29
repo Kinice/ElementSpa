@@ -4,14 +4,16 @@
       <span>LOGO</span>
     </div>
     <div class="m-user">
-      
+      <span class="m-wel">
+        
+      </span>
     </div>
   </header>
 </template>
 
 <script>
   export default {
-
+    
   }
 </script>
 
