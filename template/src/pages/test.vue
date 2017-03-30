@@ -55,6 +55,7 @@
             finalData.push(data)
           }
           this.gridOption.data = finalData
+          this.loading = false
         }.bind(this),1000)
       }
     },
