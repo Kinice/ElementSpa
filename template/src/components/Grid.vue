@@ -33,6 +33,7 @@
                 pageSize: 10
             }
         },
+        // 3个props必须引入 必须以bind的方式
         props: {
             loading: {
                 type: Boolean,

@@ -16,7 +16,8 @@
 <script>
     import Vue from 'vue'
     import { mapActions } from 'vuex'
-    import { USER_SIGNIN } from '../../store/user'
+    import { USER_SIGNIN,USER_SIGNOUT } from '../../store/user'
+    import { STORE_INDEX } from '../../store/navIndex'
 
     export default {
         data() {
@@ -28,15 +29,22 @@
             }
         },
         methods: {
-            ...mapActions([USER_SIGNIN]),
+            ...mapActions([USER_SIGNIN,USER_SIGNOUT,STORE_INDEX]),
             login() {
                 if(!this.form.password || !this.form.username) return
                 if(this.form.password == '111111' && this.form.username == 'admin'){
+                    this.STORE_INDEX('1')
                     this.USER_SIGNIN(this.form)
+                    this.$message.success('登录成功')
                     this.$router.replace({ path: '/' })
                 }else{
                     this.$message.error('用户名或密码错误')
                 }
+            }
+        },
+        mounted() {
+            if(this.$store.state.User.username){
+                this.USER_SIGNOUT()
             }
         }
     }

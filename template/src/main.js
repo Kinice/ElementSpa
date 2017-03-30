@@ -25,7 +25,7 @@ import App from './App'
 
 // 初始化filter
 Object.keys(filters).forEach(k => Vue.filter(k, filters[k]))
-
+// Ajax拦截器
 Vue.http.interceptors.push(function(request, next) {
     request.headers.set('token',store.state.User.password)
     next(response => {

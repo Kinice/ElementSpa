@@ -10,13 +10,10 @@ export default {
 }
 </script>
 
-<style lang="less">
-  // font awesome
-  @fa-font-path: '../node_modules/font-awesome/fonts/';
-  @import '../node_modules/font-awesome/less/font-awesome';
-  
+<style lang="less">  
   //reset
   @import 'assets/less/reset.less';
+  @import 'assets/less/basic.less';
   p{
     text-align: justify
   }

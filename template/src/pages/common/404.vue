@@ -2,7 +2,7 @@
   <div class="login">
       <div class="login-form">
         <div class="login-title">
-            <router-link to="/students"><h1>DEAD END</h1></router-link>
+            <router-link to="/"><h1>DEAD END</h1></router-link>
         </div>
       </div>
   </div>
