@@ -36,7 +36,6 @@ $ npm install -g vue-cli
 #### 3. 将模板下载下来并在dev环境下运行
 
 ```
-$ npm install -g vue-cli
 $ vue init kinice/elementSpa [project name]
 $ cd [project name]
 $ npm install
