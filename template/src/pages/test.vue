@@ -25,7 +25,7 @@
               key:'email',
               label:'邮箱'
             },{
-              key:'career',
+              key:'carrer',
               label:'职业'
             },{
               key:'id',
